@@ -1,0 +1,40 @@
+network.host: 0.0.0.0
+
+cluster.name: ${CLUSTER_NAME}
+
+node: 
+  master: ${NODE_MASTER:true}
+  data: ${NODE_DATA:true}
+  ingest: ${NODE_INGEST:false}
+  name: ${NODE_NAME}
+
+cloud:
+  kubernetes:
+    service: ${SERVICE_NAME}
+    namespace: ${NAMESPACE}
+
+gateway:
+  recover_after_nodes: ${NODES_QUORUM:2}
+  expected_nodes: ${NODES_TOTAL:3}
+  recover_after_time: 5m
+
+discovery:
+  type: kubernetes
+  zen:
+    minimum_master_nodes: ${MASTER_QUORUM:2}
+
+path:
+  data: /usr/share/elasticsearch/data
+  plugins: /usr/share/elasticsearch/plugins
+  logs: /usr/share/elasticsearch/logs
+  work: /usr/share/elasticsearch/work
+
+bootstrap:
+  memory_lock: true
+
+http:
+  enabled: ${HTTP_ENABLE:false}
+  compression: false
+  cors:
+    enabled: ${HTTP_CORS_ENABLE:true}
+    allow-origin: ${HTTP_CORS_ALLOW_ORIGIN:"*"}
