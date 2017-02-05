@@ -1,0 +1,16 @@
+## Derrived
+/build
+/node_modules
+/npm-debug.log
+
+## Eclipse
+.project
+.settings
+.buildpath
+
+## Windows
+Desktop.ini
+Thumbs.db
+
+## Mac
+.DS_Store

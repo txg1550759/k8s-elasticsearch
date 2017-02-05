@@ -1,0 +1,23 @@
+{
+	"name": "@youdowell/k8s-elasticsearch",
+	"version": "0.0.1",
+	"description": "Elasticsearch Docker image for K8s cluster",
+	"author": "Andrew Usov <andrew.usov@youdowell.com>",
+	"license": "ISC",
+	"keywords": [
+		"elasticsearch",
+		"k8s",
+		"kubernetes"
+	],
+	"homepage": "https://github.com/youdowell/k8s-elasticsearch",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/youdowell/k8s-elasticsearch.git"
+	},
+	"bugs": {
+		"url": "https://github.com/youdowell/k8s-elasticsearch/issues"
+	},
+	"scripts": {
+		"postversion": "git push --follow-tags"
+	}
+}
